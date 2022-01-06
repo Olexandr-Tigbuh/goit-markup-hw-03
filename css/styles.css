@@ -40,7 +40,7 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: auto solid red 10px;
+  outline: 2px solid red;
 }
 img {
   display: block;
@@ -58,8 +58,21 @@ button {
   color: inherit;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /*-----------------header-----------------------------*/
-.heder {
+.header {
   padding-top: 24px;
   padding-bottom: 25px;
 }
@@ -96,9 +109,11 @@ button {
   color: var(--light-color);
 }
 
-/* ----------------HERO ---main-section-----------------*/
+/* ----------------HERO ---main-section----Замовити послугу-------------*/
 .hero-section {
   background-color: var(--beckground-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hiro-title {
   font-weight: 900;
@@ -108,7 +123,9 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-color);
+  margin-bottom: 30px;
 }
+
 .hiro-btn {
   font-family: Roboto;
   font-style: normal;
@@ -130,7 +147,11 @@ button {
   background-color: var(--active-accent-color);
 }
 
-/*----------------------FEATUREs-------------------------------------*/
+/*----------------------FEATUREs-----Особливості--------------------------------*/
+.features-list {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .features-title {
   font-size: 14px;
@@ -138,9 +159,12 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--dark-color);
+  margin-bottom: 10px;
 }
-
-/*-----------------------SECTION TITLE--------------------------------*/
+/*-----------------------SECTION TITLE-----Чим ми займаємось---------------------------*/
+.work {
+  padding-bottom: 94px;
+}
 
 .section-title {
   font-size: 36px;
@@ -148,13 +172,16 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--dark-color);
+  margin-bottom: 52px;
 }
 
-/*-----------------------about--------------------------------*/
-
+/*-----------------------about--------наша команда------------------------*/
 .about {
   background: #f5f4fa;
   text-align: center;
+  border-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .about-item-title {
@@ -166,12 +193,15 @@ button {
 .about-item-title {
   font-size: 16px;
   line-height: 1.18;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
-
 /*-----------------------------FOOTER-------------------------*/
 
 .footer {
   background-color: var(--beckground-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-item-link[target='_blank'] {
@@ -180,6 +210,7 @@ button {
 
 .footer-item-link {
   color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
 }
 
 .footer-item-link:hover,
@@ -187,8 +218,16 @@ button {
   color: var(--accent-color);
 }
 
+.footer-list {
+  margin-top: 20px;
+}
+
 /*------------------------PORTFOLIO---------------------------*/
 
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 114px;
+}
 .portfolio-button {
   font-family: Roboto;
   font-style: normal;
@@ -197,9 +236,11 @@ button {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  border-radius: 4px;
   cursor: pointer;
   color: #212121;
   background-color: var(--light-color);
+  margin-bottom: 50px;
 }
 
 .portfolio-button:hover,
@@ -216,6 +257,8 @@ button {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--dark-color);
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 
 .projects-after-title {
@@ -223,17 +266,4 @@ button {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-}
-/**/
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
 }
