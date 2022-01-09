@@ -44,6 +44,8 @@ ul {
 }
 img {
   display: block;
+  width: 100;
+  height: auto;
 }
 button {
   cursor: pointer;
@@ -71,16 +73,34 @@ button {
   margin: -1px;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
 /*-----------------header-----------------------------*/
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
+.header .logo {
+  margin-right: 93px;
+}
+
 .heder-nav {
   display: flex;
   align-items: center;
-  margin-right: 331px;
 }
 
 .header-container {
@@ -99,6 +119,7 @@ button {
 .header-contacts-list {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .contact-item {
@@ -127,20 +148,17 @@ button {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  margin-right: 93px;
+  display: block;
 }
 .header-logo {
   color: var(--text-color);
-}
-.footer-logo {
-  color: var(--light-color);
 }
 /* ----------------HERO ---main-section----Замовити послугу-------------*/
 .hero-section {
   display: block;
   background-color: var(--beckground-color);
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 }
 
 .hiro-title {
@@ -154,6 +172,7 @@ button {
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .hiro-btn {
@@ -170,12 +189,10 @@ button {
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 200px;
-  min-height: 50px;
-  text-indent: 25px;
+  padding: 10px 32px;
+  border: none;
 }
 
 .hiro-btn:active,
@@ -184,14 +201,12 @@ button {
 }
 
 /*----------------------FEATUREs-----Особливості--------------------------------*/
-.features-list {
-  display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
+.features {
+  padding-bottom: 0px;
 }
 
-.features-margin {
-  margin-left: 30px;
+.features-item {
+  width: calc(100% / 4 - 30px);
 }
 
 .features-title {
@@ -203,10 +218,6 @@ button {
   margin-bottom: 10px;
 }
 /*-----------------------SECTION TITLE-----Чим ми займаємось---------------------------*/
-.work {
-  padding-bottom: 94px;
-}
-
 .section-title {
   font-size: 36px;
   line-height: 1.16;
@@ -216,13 +227,8 @@ button {
   margin-bottom: 52px;
 }
 
-.work-list {
-  display: flex;
-  margin-left: -30px;
-}
 .work-item {
   width: calc(100% / 3 - 30px);
-  margin-left: 30px;
 }
 
 /*-----------------------about--------наша команда------------------------*/
@@ -230,29 +236,27 @@ button {
   background: #f5f4fa;
   text-align: center;
   border-top: 94px;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
-.about-list {
-  display: flex;
-  margin-left: -30px;
-}
+
 .about-item {
   width: calc(100% / 4 - 30px);
-  margin-left: 30px;
+  background-color: var(--light-color);
 }
 
 .about-item-title {
   font-weight: 500;
   color: var(--dark-color);
+  margin-bottom: 10px;
 }
 
 .about-after-title,
 .about-item-title {
   font-size: 16px;
   line-height: 1.18;
-  margin-top: 30px;
-  margin-bottom: 10px;
+}
+
+.about-wrapper {
+  padding: 30px;
 }
 /*-----------------------------FOOTER-------------------------*/
 
@@ -260,6 +264,11 @@ button {
   background-color: var(--beckground-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-bottom: 20px;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
 }
 
 .footer-item-link[target='_blank'] {
@@ -268,7 +277,10 @@ button {
 
 .footer-item-link {
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 9px;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-item-link:hover,
@@ -276,19 +288,11 @@ button {
   color: var(--accent-color);
 }
 
-.footer-list {
-  margin-top: 20px;
+.footer-logo {
+  color: var(--light-color);
 }
 
 /*------------------------PORTFOLIO---------------------------*/
-.projects-list {
-  display: flex;
-  margin-left: -30px;
-}
-.projects-item {
-  width: calc(100% / 3 - 30px);
-  margin-left: 30px;
-}
 .portfolio-section {
   padding-top: 94px;
   padding-bottom: 114px;
@@ -301,12 +305,16 @@ button {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  padding: 6px 22px;
   border-radius: 4px;
   cursor: pointer;
   color: #212121;
   background-color: #f5f4fa;
-  margin-bottom: 50px;
   border: none;
+}
+
+.portfolio-button {
+  margin-right: 8px;
 }
 
 .portfolio-button:hover,
@@ -316,43 +324,30 @@ button {
   background-color: var(--accent-color);
 }
 
-.portfolio-button {
-  margin-left: 8px;
-}
-
 .portfolio-button-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 /*------------------------PROJECTS------------------------------*/
-
+.projects-item {
+  width: calc(100% / 3 - 30px);
+}
 .projects-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--dark-color);
-  margin-top: 20px;
   margin-bottom: 4px;
 }
-
 .projects-after-title {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  margin-bottom: 20px;
 }
 
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
-.projects-item {
-  display: flex;
-  margin-left: 30px;
-  margin-top: 30px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.projects-wrapper {
   border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
