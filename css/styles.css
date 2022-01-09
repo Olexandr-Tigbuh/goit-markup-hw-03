@@ -313,8 +313,8 @@ button {
   border: none;
 }
 
-.portfolio-button {
-  margin-right: 8px;
+.portfolio-button-item:not(:last-of-type) {
+  margin-left: 8px;
 }
 
 .portfolio-button:hover,
